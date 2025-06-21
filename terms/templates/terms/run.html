@@ -2,7 +2,7 @@
 {% if finding_list %}
 <ul>
   {% for finding in finding_list %}
-  <li>{{ finding.pk }}</li>
+  <li><a href="{{ finding.url }}">{{ finding.page_name }}</a></li>
   {% endfor %}
 </ul>
 {% else %}

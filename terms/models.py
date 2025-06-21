@@ -18,6 +18,8 @@ class Run(models.Model):
 
 class Finding(models.Model):
     run = models.ForeignKey(Run, on_delete=models.CASCADE)
+    url = models.TextField()
+    page_name = models.TextField()
 
     def __str__(self):
-        return str(self.pk)
+        return self.page_name
