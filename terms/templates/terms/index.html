@@ -1,7 +1,7 @@
 {% if term_list %}
 <ul>
   {% for term in term_list %}
-  <li>{{ term.term }}</li>
+  <li><a href="/terms/{{ term.pk }}/">{{ term.term }}</a></li>
   {% endfor %}
 </ul>
 {% else %}

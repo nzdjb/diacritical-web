@@ -1,0 +1,10 @@
+{{ term }}
+{% if run_list %}
+<ul>
+  {% for run in run_list %}
+  <li><a href="/terms/{{ term.pk }}/{{ run.pk }}/">{{ run.pk }}: {{ run.start_time }}</a></li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No runs.</p>
+{% endif %}
