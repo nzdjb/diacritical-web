@@ -1,0 +1,9 @@
+{% if term_list %}
+<ul>
+  {% for term in term_list %}
+  <li>{{ term.term }}</li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No terms registered.</p>
+{% endif %}
