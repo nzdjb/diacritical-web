@@ -1,3 +1,5 @@
+{% extends "base.html" %}
+{% block content %}
 {% if term_list %}
 <ul>
   {% for term in term_list %}
@@ -7,3 +9,4 @@
 {% else %}
 <p>No terms registered.</p>
 {% endif %}
+{% endblock %}

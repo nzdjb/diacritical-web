@@ -1,3 +1,5 @@
+{% extends "base.html" %}
+{% block content %}
 {{ term }}: {{ run.start_time }}
 {% if finding_list %}
 <ul>
@@ -8,3 +10,4 @@
 {% else %}
 <p>No findings.</p>
 {% endif %}
+{% endblock %}

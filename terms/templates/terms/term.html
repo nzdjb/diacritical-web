@@ -1,3 +1,5 @@
+{% extends "base.html" %}
+{% block content %}
 {{ term }}
 {% if user.is_authenticated %}
 <form action="" method="post">
@@ -14,3 +16,4 @@
 {% else %}
 <p>No runs.</p>
 {% endif %}
+{% endblock %}
