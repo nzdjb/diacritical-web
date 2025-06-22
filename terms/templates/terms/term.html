@@ -1,5 +1,8 @@
 {{ term }}
-<input type="button" value="Start"></input>
+<form action="" method="post">
+  {% csrf_token %}
+  <input type="submit" value="Start">
+</form>
 {% if run_list %}
 <ul>
   {% for run in run_list %}

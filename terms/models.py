@@ -1,4 +1,6 @@
 from django.db import models
+from django.utils import timezone
+from django.utils.crypto import get_random_string
 
 
 class Term(models.Model):
@@ -10,7 +12,8 @@ class Term(models.Model):
 
 class Run(models.Model):
     term = models.ForeignKey(Term, on_delete=models.CASCADE)
-    start_time = models.DateTimeField()
+    start_time = models.DateTimeField(default=timezone.now())
+    secret = models.CharField(max_length=32, default=get_random_string(32))
 
     def __str__(self):
         return str(self.pk)
