@@ -1,8 +1,10 @@
 {{ term }}
+{% if user.is_authenticated %}
 <form action="" method="post">
   {% csrf_token %}
   <input type="submit" value="Start">
 </form>
+{% endif %}
 {% if run_list %}
 <ul>
   {% for run in run_list %}

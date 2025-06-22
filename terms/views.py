@@ -1,6 +1,7 @@
-from django.utils import timezone
 from django.shortcuts import render
+from django.utils.decorators import method_decorator
 from django.views import View
+from django.contrib.auth.decorators import login_required
 
 from .models import Finding, Run, Term
 
@@ -18,6 +19,7 @@ class TermView(View):
         }
         return render(request, "terms/term.html", context)
 
+    @method_decorator(login_required)
     def post(self, request, term_id):
         Run(term_id=term_id).save()
         return self.get(request, term_id)

@@ -34,6 +34,8 @@ else:
     DEBUG = False
     ALLOWED_HOSTS = [environ.get("ALLOWED_HOSTS")]
 
+LOGIN_URL = "/admin/login/"
+
 
 # Application definition
 
