@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "django>=5.2.3",
+    "django-types>=0.21.0",
     "python-dotenv>=1.1.0",
 ]
 
@@ -13,3 +14,7 @@ dependencies = [
 dev = [
     "black>=25.1.0",
 ]
+[tool.pyright]
+# This is not a great approach, but it works for now.
+venvPath = "/home/vscode/"
+venv = ".venv"
